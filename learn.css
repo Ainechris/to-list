@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.Task{
+    background: aqua;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.rt{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#Task{
+    padding: 8px;
+    width: 200px;
+}
+
+#Add{
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#List{
+    margin-top: 20px;
+}
+
+li{
+    margin-top: 10px;
+    background: white;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
