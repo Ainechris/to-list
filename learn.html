@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="learn.css">
 </head>
 <body>
 
@@ -20,56 +20,7 @@
         <ul id="List"></ul>
     </div>
 
-    <script>
-    const Input = document.getElementById("Task")
-const btn = document.getElementById("Add")
-const list = document.getElementById("List")
-
-btn.addEventListener("click", function(){
-
-    if(Input.value === ""){
-        alert("Input cannot be empty")
-        return
-    }
-
-    const li = document.createElement("li")
-
-    li.innerHTML = `
-        <span>${Input.value}</span>
-        <button>Edit</button>
-        <button>Delete</button>
-    `
-
-    list.appendChild(li)
-
-    Input.value = ""
-
-    const editBtn = li.querySelectorAll("button")[0]
-    const delBtn = li.querySelectorAll("button")[1]
-
-  
-    delBtn.addEventListener("click", function(){
-        li.remove()
-    })
-
-
-    editBtn.addEventListener("click", function(){
-
-        let newTask = prompt("Edit your task")
-
-        if(newTask === ""){
-            alert("Task cannot be empty")
-            return
-        }
-
-        li.querySelector("span").innerText = newTask
-
-    })
-
-})
- 
-
-    </script>
+    <script src="learn.js"></script>
 
 </body>
 </html>

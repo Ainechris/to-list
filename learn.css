@@ -5,10 +5,10 @@
 }
 
 body{
-    font-family: Arial;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 60px;
+    font-family: Arial;
 }
 
 .Task{
@@ -21,8 +21,8 @@ body{
 .rt{
     display: flex;
     gap: 10px;
-    margin-top: 20px;
     justify-content: center;
+    margin-top: 20px;
 }
 
 #Task{
@@ -42,7 +42,8 @@ body{
 li{
     margin-top: 10px;
     background: white;
-    padding: 8px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
