@@ -9,41 +9,68 @@ body{
     justify-content: center;
     margin-top: 60px;
     font-family: Arial;
+       background: #eaf4ff;
 }
 
-.Task{
-    background: aqua;
-    width: 400px;
-    padding: 20px;
-    border-radius: 10px;
+.todos--container{
+    background-color: rgb(128, 134, 141);
+    padding: 50px 20px;
+    border-radius: 4px;
 }
 
-.rt{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-}
 
-#Task{
-    padding: 8px;
-    width: 200px;
-}
 
-#Add{
-    padding: 8px 12px;
-    cursor: pointer;
-}
 
-#List{
-    margin-top: 20px;
-}
+
+
 
 li{
     margin-top: 10px;
-    background: white;
-    padding: 10px;
+    background: rgb(236, 230, 230);
+    padding: 6px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 10px;
+}
+.todo__update{
+    background-color: rgb(134, 2, 234);
+    border-radius: 5px;
+    padding: 10px 30px;
+    border: none;
+
+}
+.todo__delete{
+    background-color: aquamarine;
+    padding: 10px 30px;
+    border-radius: 5px;
+     border: none;
+     
+}
+h1{
+    text-align: center;
+}
+input{
+    width: 400px;
+    padding: 13px 9px;
+    border: none;
+    outline: none;
+    background-color: antiquewhite;
+    border-radius: 2px;
+}
+.btn__1{
+    background-color: rgb(87, 77, 175);
+    /* width: 100px; */
+    padding: 13px 45px;
+    border-radius: 5px;
+    border: none;
+
+}
+.line__through{
+    text-decoration:line-through;
+    cursor: pointer;
+
+}
+form{
+    margin-top: 20px;
 }

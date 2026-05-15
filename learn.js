@@ -1,46 +1,59 @@
-const Input = document.getElementById("Task")
-const btn = document.getElementById("Add")
-const list = document.getElementById("List")
+const form = document.querySelector("form")
+const input = document.querySelector("input")
+const todoel = document.querySelector(".todos")
 
-btn.addEventListener("click", function(){
+const todos = []
 
-    if(Input.value === ""){
-        alert("Input cannot be empty")
+form.addEventListener("submit", function(event){
+
+    event.preventDefault()
+
+    // check empty input first
+    if(input.value === ""){
+        alert("this is not filled")
         return
     }
 
-    const li = document.createElement("li")
+    const inputT = input.value
 
-    li.innerHTML = `
-        <span>${Input.value}</span>
-        <button>Edit</button>
-        <button>Delete</button>
-    `
+    // add new todo
+    todos.push({ text: inputT })
 
-    list.appendChild(li)
+    // display todos again
+    displayTodos()
 
-    Input.value = ""
-
-    const editBtn = li.querySelectorAll("button")[0]
-    const delBtn = li.querySelectorAll("button")[1]
-
-    // DELETE
-    delBtn.addEventListener("click", function(){
-        li.remove()
-    })
-
-    // EDIT
-    editBtn.addEventListener("click", function(){
-
-        let newTask = prompt("Edit your task")
-
-        if(newTask === ""){
-            alert("Task cannot be empty")
-            return
-        }
-
-        li.querySelector("span").innerText = newTask
-
-    })
-
+    // clear input
+    input.value = ""
 })
+
+const displayTodos = function(){
+
+    todoel.innerHTML = ""
+
+    for(const todo of todos){
+
+        const html = `
+        
+        <li class="todo">
+            <span class="todo__text">${todo.text}</span>
+            <div>
+                <button class="btn todo__update">Update</button>
+                <button class="btn todo__delete">Delete</button>
+            </div>
+        </li>
+        
+        `
+
+        todoel.insertAdjacentHTML("beforeend", html)
+         const delt = todoel.querySelectorAll("button")[0]
+    const update = document.querySelectorAll("button")[1]
+    delt.addEventListener("click",function(){
+        todoel.remove()
+    })
+    }
+   
+}
+
+displayTodos()
+
+localStorage.setItem("todos", JSON.stringify(0))
